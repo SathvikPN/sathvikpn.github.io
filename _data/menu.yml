@@ -3,7 +3,7 @@
 entries:
   - title: readme
     url: readme
-  - title: writings
+  - title: thoughts
     post_list:
       limit: 10
       show_more: true

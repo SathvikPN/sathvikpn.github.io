@@ -3,14 +3,15 @@ layout: page
 title: readme
 ---
 
-hey,  
+hey anon,  
 this is Sathvik.  
 
 this is my online scribble space  
 for my thoughts i wish to crystallize.  
 
 zoom out a bit,  
-let the thought process flow,  
-put out, save them by writing them.  
+let those thoughts flow,  
+put out, write off.  
+to lay them here - is to - save them.  
 
 this is the space, to meet often.
