@@ -1,5 +1,6 @@
 <p>
   {%-for item in include.collection-%}
+  <p>
     {%- if item.url -%}
       <a href="{{ item.url }}">{{ item.title }}</a>
     {%- else -%}
@@ -16,6 +17,7 @@
           show_more_url=item.post_list.show_more_url
      -%}
     {%-endif-%}
+  </p>
 
     {%-if item.entries-%}
       {%-include menu_item.html collection=item.entries-%}
