@@ -16,12 +16,13 @@ content ideas
 
 - motorcycle and me
 - K12 and blog and delulu euphoria
+- intentional life
 
 
 ---
 tools of trade
 
-- https://pallyy.com/tools/twitter-thread-maker
+- [https://pallyy.com/tools/twitter-thread-maker](https://pallyy.com/tools/twitter-thread-maker)
 
 
 ---
