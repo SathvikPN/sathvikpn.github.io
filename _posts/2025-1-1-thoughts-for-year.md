@@ -2,7 +2,7 @@
 layout: post
 category: general
 title: 2024 to 2025 (thoughts)
-slug: 2024-to-25
+slug: year-twenty-twenty-five
 ---
 
 as i look back 2024,  
