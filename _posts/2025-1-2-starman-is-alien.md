@@ -10,7 +10,7 @@ as i been listening to a classic song
 'starman' by David Bowie,    
 here's how the thoughts flowed.  
   
---- >>>  
+> > >
   
 the one above us,    
 which we say god (with hundreds of types)    
