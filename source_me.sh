@@ -21,3 +21,7 @@ function nfile {
     echo "open $file ..."
     vso $file
 }
+
+function cleanup(){
+    ls *.bak && read -p "Do you want to delete these files? (y/n): " confirm && [[ $confirm == [yY] ]] && rm *.bak
+}
