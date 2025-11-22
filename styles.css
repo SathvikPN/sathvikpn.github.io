@@ -225,6 +225,7 @@ main {
     letter-spacing: -0.02em;
     color: var(--text-primary);
     text-decoration: none;
+    /* font-family: var(--font-mono); */
 }
 
 .navbar-nav {

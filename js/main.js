@@ -21,7 +21,7 @@ async function loadComponents() {
 
     if (navbarPlaceholder) {
         try {
-            const response = await fetch('components/navbar.html');
+            const response = await fetch(`components/navbar.html?t=${new Date().getTime()}`);
             const html = await response.text();
             navbarPlaceholder.innerHTML = html;
         } catch (error) {
@@ -31,7 +31,7 @@ async function loadComponents() {
 
     if (footerPlaceholder) {
         try {
-            const response = await fetch('components/footer.html');
+            const response = await fetch(`components/footer.html?t=${new Date().getTime()}`);
             const html = await response.text();
             footerPlaceholder.innerHTML = html;
         } catch (error) {
@@ -102,7 +102,7 @@ async function loadPost() {
     }
 
     try {
-        const response = await fetch(`posts/${slug}.md`);
+        const response = await fetch(`posts/${slug}.md?t=${new Date().getTime()}`);
         if (!response.ok) throw new Error('Post not found');
 
         const markdown = await response.text();
