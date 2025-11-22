@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathvik PN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">Sathvik PN</a>
+        
+        <div class="navbar-nav">
+            <a class="nav-link" href="writes.html">writes</a>
+            <a class="nav-link" href="shelf.html">shelf</a>
+            <a class="nav-link" href="scratch.html">scratch</a>
+        </div>
+
+        <div class="nav-right">
+            <span id="indian-time"></span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" style="display: none; padding: 1.25rem; background: white; border-bottom: 1px solid #e5e7eb;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a class="nav-link" href="writes.html" style="display: block;">writes</a>
+            <a class="nav-link" href="shelf.html" style="display: block;">shelf</a>
+            <a class="nav-link" href="scratch.html" style="display: block;">scratch</a>
+            <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-tertiary); margin-top: 0.5rem;">
+                <span id="indian-time-mobile"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <main>
+            <!-- Intro Section -->
+            <section class="intro-section">
+                <div class="intro-content">
+                    <h1 class="h1-title" style="margin-bottom: 1.5rem;">hello, this is sathvik</h1>
+                    <p class="intro-text">
+                        doing cs50x. <br>
+                        building this to learn about webpages. <br>
+                        suggestions are welcome!
+                    </p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <blockquote style="border-left: 2px solid #e5e7eb; padding-left: 1rem; font-style: italic; color: var(--text-tertiary);">
+                            <p style="margin-bottom: 0.5rem;">we can just do things.</p>
+                            <footer style="font-size: 0.875rem; padding: 0; text-align: left; margin-top: 0;">— someone</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <div class="intro-image-container">
+                    <img src="https://pbs.twimg.com/profile_images/1733226010181771264/YlPo8owc_400x400.jpg" 
+                        alt="Sathvik PN" 
+                        class="profile-image">
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="section-gap">
+                <span class="section-label">About</span>
+                <div class="summary-list">
+                    <div class="summary-item">
+                        <div class="summary-bullet"></div>
+                        <div>software engineer based in bengaluru</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-bullet"></div>
+                        <div>learning to build things for the web</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-bullet"></div>
+                        <div>interested in systems and design</div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <div class="social-icon-group">
+                        <a href="mailto:contact@sathvikpn.com" class="social-link" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                        <a href="https://www.x.com/sathvikpn/" target="_blank" class="social-link" aria-label="Twitter/X">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        </a>
+                        <a href="https://www.github.com/sathvikpn" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects & Writing Grid -->
+            <div class="grid-layout">
+                <!-- Projects -->
+                <section>
+                    <span class="section-label">Projects</span>
+                    <div class="projects-list">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon bg-blue-600">P</div>
+                                <a href="#" class="project-title">Portfolio Site</a>
+                            </div>
+                            <div class="project-description">
+                                A minimalist portfolio website built with HTML/CSS.
+                            </div>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon bg-black">C</div>
+                                <a href="#" class="project-title">CS50x</a>
+                            </div>
+                            <div class="project-description">
+                                Coursework and problem sets from Harvard's CS50x.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Writing -->
+                <section>
+                    <span class="section-label">Writing</span>
+                    <div class="writing-list">
+                        <div class="writing-item">
+                            <span class="writing-date">2025</span>
+                            <a href="writes.html" class="writing-title">why write?</a>
+                        </div>
+                        <div class="writing-item">
+                            <span class="writing-date">2025</span>
+                            <a href="writes.html" class="writing-title">why i started CS50x?</a>
+                        </div>
+                        <div class="writing-item">
+                            <span class="writing-date">2025</span>
+                            <a href="writes.html" class="writing-title">what i want to do with this website?</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <span>reach me @sathvikpn</span>
+                <span style="color: var(--border-color);">|</span>
+                <a href="https://www.x.com/sathvikpn/" target="_blank" class="footer-link">twitter/x</a>
+                <a href="https://www.github.com/sathvikpn" target="_blank" class="footer-link">github</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Function to update the Indian time
+        function updateIndianTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-IN', { 
+            timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true 
+            }).replace(/am|pm/i, m => m.toUpperCase());
+            const text = `${timeString} · Bengaluru`;
+            
+            const desktopTime = document.getElementById('indian-time');
+            const mobileTime = document.getElementById('indian-time-mobile');
+            
+            if (desktopTime) desktopTime.textContent = text;
+            if (mobileTime) mobileTime.textContent = text;
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.style.display === 'none';
+                mobileMenu.style.display = isHidden ? 'block' : 'none';
+            });
+        }
+
+        // Call the function to display time immediately when the page loads
+        updateIndianTime();
+
+        // Update the time every second (1000 milliseconds)
+        setInterval(updateIndianTime, 1000);
+    </script>
+</body>
+</html>

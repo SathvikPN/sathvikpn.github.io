@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch - Sathvik PN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">Sathvik PN</a>
+
+        <div class="navbar-nav">
+            <a class="nav-link" href="writes.html">writes</a>
+            <a class="nav-link" href="shelf.html">shelf</a>
+            <a class="nav-link active" href="scratch.html">scratch</a>
+        </div>
+
+        <div class="nav-right">
+            <span id="indian-time"></span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" style="display: none; padding: 1.25rem; background: white; border-bottom: 1px solid #e5e7eb;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a class="nav-link" href="writes.html" style="display: block;">writes</a>
+            <a class="nav-link" href="shelf.html" style="display: block;">shelf</a>
+            <a class="nav-link active" href="scratch.html" style="display: block;">scratch</a>
+            <div
+                style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-tertiary); margin-top: 0.5rem;">
+                <span id="indian-time-mobile"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <main>
+            <section class="container">
+                <h1 class="h2-heading">Scratch</h1>
+
+                <!-- Quote Card -->
+                <div
+                    style="border: 1px solid var(--border-color); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem;">
+                    <div
+                        style="font-size: 0.75rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
+                        Quote
+                    </div>
+                    <blockquote style="margin: 0;">
+                        <p
+                            style="font-size: 1.1rem; font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">
+                            "our worth is proportionate to the value we create <br>
+                            neither knowledge or effort or time could be proxy for it."
+                        </p>
+                        <footer style="font-size: 0.875rem; color: var(--text-tertiary);">
+                            — Sathvik, <cite>From his personal webpage</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Tweet Embed -->
+                <div style="margin-bottom: 2rem;">
+                    <p class="body-text">
+                        status of the website when it went live for first time ...
+                    </p>
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">work in progress but good to see the page go live <br>could share and get
+                            feedback as i make changes.<br>deployed via github pages. <a
+                                href="https://t.co/57wsD1RV17">pic.twitter.com/57wsD1RV17</a></p>&mdash; Sathvik PN
+                        (@SathvikPN) <a
+                            href="https://twitter.com/SathvikPN/status/1924379898308882815?ref_src=twsrc%5Etfw">May 19,
+                            2025</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <span>reach me @sathvikpn</span>
+                <span style="color: var(--border-color);">|</span>
+                <a href="https://www.x.com/sathvikpn/" target="_blank" class="footer-link">twitter/x</a>
+                <a href="https://www.github.com/sathvikpn" target="_blank" class="footer-link">github</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Function to update the Indian time
+        function updateIndianTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-IN', {
+                timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true
+            }).replace(/am|pm/i, m => m.toUpperCase());
+            const text = `${timeString} · Bengaluru`;
+
+            const desktopTime = document.getElementById('indian-time');
+            const mobileTime = document.getElementById('indian-time-mobile');
+
+            if (desktopTime) desktopTime.textContent = text;
+            if (mobileTime) mobileTime.textContent = text;
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.style.display === 'none';
+                mobileMenu.style.display = isHidden ? 'block' : 'none';
+            });
+        }
+
+        // Call the function to display time immediately when the page loads
+        updateIndianTime();
+
+        // Update the time every second (1000 milliseconds)
+        setInterval(updateIndianTime, 1000);
+    </script>
+</body>
+
+</html>

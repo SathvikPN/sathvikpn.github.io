@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf - Sathvik PN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">Sathvik PN</a>
+
+        <div class="navbar-nav">
+            <a class="nav-link" href="writes.html">writes</a>
+            <a class="nav-link active" href="shelf.html">shelf</a>
+            <a class="nav-link" href="scratch.html">scratch</a>
+        </div>
+
+        <div class="nav-right">
+            <span id="indian-time"></span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" style="display: none; padding: 1.25rem; background: white; border-bottom: 1px solid #e5e7eb;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a class="nav-link" href="writes.html" style="display: block;">writes</a>
+            <a class="nav-link active" href="shelf.html" style="display: block;">shelf</a>
+            <a class="nav-link" href="scratch.html" style="display: block;">scratch</a>
+            <div
+                style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-tertiary); margin-top: 0.5rem;">
+                <span id="indian-time-mobile"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <main>
+            <section class="container">
+                <h1 class="h2-heading">Shelf</h1>
+                <p class="body-text">
+                    my favourite minimalist pages. <br>
+                    no ads, no news, no non-sense.
+                </p>
+
+                <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;"><a href="https://www.julian.com/"
+                            style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">julian.com</a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://paulgraham.com/articles.html"
+                            style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">paulgraham.com/articles.html</a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://longform.asmartbear.com/"
+                            style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">longform.asmartbear.com</a>
+                    </li>
+                </ul>
+
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <span>reach me @sathvikpn</span>
+                <span style="color: var(--border-color);">|</span>
+                <a href="https://www.x.com/sathvikpn/" target="_blank" class="footer-link">twitter/x</a>
+                <a href="https://www.github.com/sathvikpn" target="_blank" class="footer-link">github</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Function to update the Indian time
+        function updateIndianTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-IN', {
+                timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true
+            }).replace(/am|pm/i, m => m.toUpperCase());
+            const text = `${timeString} · Bengaluru`;
+
+            const desktopTime = document.getElementById('indian-time');
+            const mobileTime = document.getElementById('indian-time-mobile');
+
+            if (desktopTime) desktopTime.textContent = text;
+            if (mobileTime) mobileTime.textContent = text;
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.style.display === 'none';
+                mobileMenu.style.display = isHidden ? 'block' : 'none';
+            });
+        }
+
+        // Call the function to display time immediately when the page loads
+        updateIndianTime();
+
+        // Update the time every second (1000 milliseconds)
+        setInterval(updateIndianTime, 1000);
+    </script>
+</body>
+
+</html>
