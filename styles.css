@@ -184,14 +184,19 @@ main {
 /* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
 /* -------------------------------------------------------------------------- */
-.navbar {
+#navbar-placeholder {
     position: sticky;
     top: 0;
     z-index: 50;
+    width: 100%;
+}
+
+.navbar {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(4px);
     border-bottom: 1px solid var(--border-color);
     width: 100%;
+    /* Removed sticky from here to let placeholder handle it */
 }
 
 .navbar-inner {
