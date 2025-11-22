@@ -9,105 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        details {
-            border-bottom: 1px solid var(--border-color);
-            padding: 1.5rem 0;
-        }
-
-        details:last-child {
-            border-bottom: none;
-        }
-
-        summary {
-            cursor: pointer;
-            list-style: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: '+';
-            font-size: 1.25rem;
-            font-weight: 300;
-            color: var(--text-muted);
-        }
-
-        details[open] summary::after {
-            content: '-';
-        }
-
-        details[open] summary {
-            margin-bottom: 1.5rem;
-        }
-
-        .details-content {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            animation: slideDown 0.3s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <nav class="navbar">
-        <a class="navbar-brand" href="index.html">Sathvik PN</a>
-
-        <div class="navbar-nav">
-            <a class="nav-link active" href="writes.html">writes</a>
-            <a class="nav-link" href="shelf.html">shelf</a>
-            <a class="nav-link" href="scratch.html">scratch</a>
-        </div>
-
-        <div class="nav-right">
-            <span id="indian-time"></span>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" aria-label="Toggle navigation">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </button>
-    </nav>
-
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" style="display: none; padding: 1.25rem; background: white; border-bottom: 1px solid #e5e7eb;">
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <a class="nav-link active" href="writes.html" style="display: block;">writes</a>
-            <a class="nav-link" href="shelf.html" style="display: block;">shelf</a>
-            <a class="nav-link" href="scratch.html" style="display: block;">scratch</a>
-            <div
-                style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-tertiary); margin-top: 0.5rem;">
-                <span id="indian-time-mobile"></span>
-            </div>
-        </div>
-    </div>
+    <!-- Header Placeholder -->
+    <div id="navbar-placeholder"></div>
 
     <div class="wrapper">
         <main>
@@ -118,137 +25,30 @@
                     build this website as beginner
                 </p>
 
-                <!-- Accordion Items -->
-                <div style="margin-top: 2rem;">
-
-                    <details>
-                        <summary>why write?</summary>
-                        <div class="details-content">
-                            <strong style="display: block; margin-bottom: 1rem; color: var(--text-primary);">why write
-                                when advent of AI abstracts it away</strong>
-                            <p>
-                                i write, <br>
-                                i want to. <br>
-                                writing, even be it in draft state <br>
-                                is good enough for me to crystallize my thoughts. <br>
-                                i write to improve my own clarity of thoughts.
-                            </p>
-
-                            <p>
-                                i write, <br>
-                                it slows me down but it helps me think when things are important <br>
-                                i treat it as an investment for things that are dear to me <br>
-                                i wish to be intellectually more active. <br>
-                                while i been trimming slop content across social media feeds, <br>
-                                i want to dedicate my attention currency for things that interests me. <br>
-                                i want to increase my threshold of focus, <br>
-                                this is one of my way of attempting to do so.
-                            </p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>why i started CS50x?</summary>
-                        <div class="details-content">
-                            <strong style="display: block; margin-bottom: 1rem; color: var(--text-primary);">why start
-                                introductory course when AI is all over</strong>
-                            <p>
-                                i started CS50x because i wanted to learn about softwares in well setting. <br>
-                                i, as a entry level backend engineer, wanted to build fullstack things. <br>
-                                i don't have the traditional degree in computer science. <br>
-                                in the events of busy scheme of things at life, <br>
-                                i want to relive the joy of building things for fun. <br>
-                                i want to start simple and build up from there. <br>
-                                i want to start with something that i could reach it to people.
-                            </p>
-                            <p>
-                                time is getting constrained for these explorations, <br>
-                                so i jumpstarted with learning introductory materials <br>
-                                been through a course on c programming language from MIT OCW, <br>
-                                notes section was of great help to me. <br>
-                                i prefer reading if could comprehend the material, than videos <br>
-                                i also replaced my dying laptop with a new one, <br>
-                                and checked out cs50x 2025 edition, confirmed it has notes section <br>
-                                and now making my way through it. <br>
-                                and i say, CS50x is at it's finest!
-                            </p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>what i want to do with this website?</summary>
-                        <div class="details-content">
-                            <strong style="display: block; margin-bottom: 1rem; color: var(--text-primary);">this
-                                frontend only website is for learning, should i invest more time polishing it
-                                ...</strong>
-                            <p>
-                                i started buildig this website <br>
-                                as an assignment for CS50x week 8 learning about html, css, javascript<br>
-                                this ofcourse is an hands-on approach to learning <br>
-                                and as i spending time on this, <br>
-                                been figuring out the css and javascript <br>
-                                and i see there's lot to learn to build a good website
-                            </p>
-
-                            <p>
-                                i searched hour about visiting websites and drawing inspirations, <br>
-                                over the time, i started taking notes on why i like certain websites <br>
-                                and i want to build something like that, to show intent clearly <br>
-                                this website is my way of attempting to make that MVP kinda site, <br>
-                                though elementary, i see this satisfying and so many hours has went in, <br>
-                                on polishing it, writing even this content is taking time but its okay <br>
-                                i'm gonna use this website as a sandbox to play around.
-                            </p>
-                        </div>
-                    </details>
-
+                <!-- Writing List -->
+                <div class="writing-list">
+                    <div class="writing-item">
+                        <span class="writing-date">2025</span>
+                        <a href="post.html?slug=why-write" class="writing-title">why write?</a>
+                    </div>
+                    <div class="writing-item">
+                        <span class="writing-date">2025</span>
+                        <a href="post.html?slug=why-cs50x" class="writing-title">why i started CS50x?</a>
+                    </div>
+                    <div class="writing-item">
+                        <span class="writing-date">2025</span>
+                        <a href="post.html?slug=website-intent" class="writing-title">what i want to do with this
+                            website?</a>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <div class="footer-content">
-                <span>reach me @sathvikpn</span>
-                <span style="color: var(--border-color);">|</span>
-                <a href="https://www.x.com/sathvikpn/" target="_blank" class="footer-link">twitter/x</a>
-                <a href="https://www.github.com/sathvikpn" target="_blank" class="footer-link">github</a>
-            </div>
-        </footer>
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
     </div>
 
-    <script>
-        // Function to update the Indian time
-        function updateIndianTime() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('en-IN', {
-                timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true
-            }).replace(/am|pm/i, m => m.toUpperCase());
-            const text = `${timeString} · Bengaluru`;
-
-            const desktopTime = document.getElementById('indian-time');
-            const mobileTime = document.getElementById('indian-time-mobile');
-
-            if (desktopTime) desktopTime.textContent = text;
-            if (mobileTime) mobileTime.textContent = text;
-        }
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const isHidden = mobileMenu.style.display === 'none';
-                mobileMenu.style.display = isHidden ? 'block' : 'none';
-            });
-        }
-
-        // Call the function to display time immediately when the page loads
-        updateIndianTime();
-
-        // Update the time every second (1000 milliseconds)
-        setInterval(updateIndianTime, 1000);
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

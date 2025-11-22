@@ -1,4 +1,4 @@
-# Design Base Plan - Yash Bhardwaj Portfolio Website
+# Design Base Plan
 
 ## Overview
 This document captures the complete design system, layout specifications, typography, colors, spacing, and UX patterns for the minimalist portfolio website.
