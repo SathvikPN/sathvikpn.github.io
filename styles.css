@@ -22,6 +22,8 @@
     --container-max-width: 720px;
     /* Reduced by ~20% from 896px */
     --header-height: auto;
+    --section-spacing: 8rem;
+
 
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -187,8 +189,8 @@ main {
 }
 
 .section-gap {
-    margin-bottom: 5rem;
-    /* mb-20 */
+    margin-bottom: var(--section-spacing);
+    /* mb-32 */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -301,6 +303,11 @@ main {
     .intro-section {
         flex-direction: row;
     }
+}
+
+.section-div {
+    margin-bottom: var(--section-spacing);
+    /* mb-32 */
 }
 
 .intro-content {
