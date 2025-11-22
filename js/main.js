@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initTime();
     initMobileMenu();
     highlightActiveLink();
-    
+
     // Check if we are on the post page
     if (window.location.pathname.endsWith('post.html')) {
         loadPost();
@@ -43,7 +43,7 @@ async function loadComponents() {
 function highlightActiveLink() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav-link');
-    
+
     links.forEach(link => {
         const href = link.getAttribute('href');
         if (href === currentPath) {
@@ -61,7 +61,7 @@ function initTime() {
         const timeString = now.toLocaleTimeString('en-IN', {
             timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true
         }).replace(/am|pm/i, m => m.toUpperCase());
-        const text = `${timeString} · Bengaluru`;
+        const text = `${timeString} · Sagara`;
 
         const desktopTime = document.getElementById('indian-time');
         const mobileTime = document.getElementById('indian-time-mobile');
@@ -77,7 +77,7 @@ function initTime() {
 function initMobileMenu() {
     // Since navbar is loaded dynamically, we need to use event delegation or wait for it to load
     // But since we await loadComponents(), we can attach listeners here.
-    
+
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -104,16 +104,16 @@ async function loadPost() {
     try {
         const response = await fetch(`posts/${slug}.md`);
         if (!response.ok) throw new Error('Post not found');
-        
+
         const markdown = await response.text();
-        
+
         // Simple frontmatter parsing (if needed in future, for now just rendering body)
         // Assuming the first line might be a title or we just render everything.
         // Let's use marked.js to render
-        
+
         if (window.marked) {
             contentContainer.innerHTML = window.marked.parse(markdown);
-            
+
             // Optional: Extract title from H1 if present
             const h1 = contentContainer.querySelector('h1');
             if (h1) {
