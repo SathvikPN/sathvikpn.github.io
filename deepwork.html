@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathvik PN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <main>
+            <div class="deepwork-container">
+                <!-- Timer Section -->
+                <section class="timer-section">
+                    <div class="timer-display-container">
+                        <div id="timer-display" class="timer-display">00:00</div>
+                        <div id="lap-display" class="lap-display">Laps: 0</div>
+                    </div>
+
+                    <div class="timer-controls">
+                        <button id="start-btn" class="timer-btn">Start</button>
+                        <button id="pause-btn" class="timer-btn" disabled>Pause</button>
+                        <button id="reset-btn" class="timer-btn">Reset</button>
+                    </div>
+                </section>
+
+                <div class="divider section-gap"></div>
+
+                <!-- Todo List Section -->
+                <section class="todo-section">
+                    <h2 class="h2-heading">Tasks</h2>
+                    <div class="todo-container">
+                        <table class="todo-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50%;">Task</th>
+                                    <th style="width: 10%;">Done</th>
+                                    <th style="width: 40%;">Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody id="todo-body">
+                                <!-- Initial Rows -->
+                                <tr class="todo-row">
+                                    <td><input type="text" class="todo-input" placeholder="Task..."></td>
+                                    <td class="text-center"><input type="checkbox" class="todo-check"></td>
+                                    <td><input type="text" class="todo-input" placeholder="Remarks..."></td>
+                                </tr>
+                                <tr class="todo-row">
+                                    <td><input type="text" class="todo-input" placeholder="Task..."></td>
+                                    <td class="text-center"><input type="checkbox" class="todo-check"></td>
+                                    <td><input type="text" class="todo-input" placeholder="Remarks..."></td>
+                                </tr>
+                                <tr class="todo-row">
+                                    <td><input type="text" class="todo-input" placeholder="Task..."></td>
+                                    <td class="text-center"><input type="checkbox" class="todo-check"></td>
+                                    <td><input type="text" class="todo-input" placeholder="Remarks..."></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="add-task-btn" class="add-task-btn">+ Add Row</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/deepwork.js"></script>
+</body>
+
+</html>

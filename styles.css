@@ -640,3 +640,164 @@ footer {
 .mb-8 {
     margin-bottom: 2rem;
 }
+/* -------------------------------------------------------------------------- */
+/*                                Deepwork Page                               */
+/* -------------------------------------------------------------------------- */
+
+.deepwork-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+/* Timer Section */
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.timer-display-container {
+    text-align: center;
+}
+
+.timer-display {
+    font-family: var(--font-mono);
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.lap-display {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.timer-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+}
+
+.timer-btn:hover:not(:disabled) {
+    color: var(--text-primary);
+}
+
+.timer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Todo Section */
+.todo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todo-container {
+    width: 100%;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.todo-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.todo-table td {
+    padding: 0.75rem 0;
+    vertical-align: top;
+}
+
+.todo-input {
+    width: 100%;
+    border: none;
+    background: none;
+    font-family: var(--font-primary);
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    outline: none;
+    padding: 0;
+}
+
+.todo-input::placeholder {
+    color: var(--text-light);
+}
+
+.todo-check {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.todo-check:checked {
+    background-color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.todo-check:checked::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 30%;
+    height: 60%;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.add-task-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    transition: color 0.2s;
+}
+
+.add-task-btn:hover {
+    color: var(--text-primary);
+}
