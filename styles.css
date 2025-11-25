@@ -640,6 +640,7 @@ footer {
 .mb-8 {
     margin-bottom: 2rem;
 }
+
 /* -------------------------------------------------------------------------- */
 /*                                Deepwork Page                               */
 /* -------------------------------------------------------------------------- */
@@ -651,6 +652,12 @@ footer {
     max-width: 600px;
     margin: 0 auto;
     padding-top: 2rem;
+}
+
+.deepwork-quote {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 /* Timer Section */

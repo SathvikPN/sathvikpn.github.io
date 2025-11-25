@@ -35,7 +35,7 @@ function initTimer() {
         // Calculate laps (every 20 minutes)
         const minutes = Math.floor(elapsedTime / 60);
         const laps = Math.floor(minutes / 20);
-        lapDisplay.textContent = `Laps: ${laps}`;
+        lapDisplay.textContent = `deepwork session ${laps + 1}`;
     }
 
     function startTimer() {
