@@ -814,7 +814,7 @@ footer {
 /* -------------------------------------------------------------------------- */
 .email-form {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .email-input-group {
@@ -837,7 +837,7 @@ footer {
     font-size: 0.875rem;
     color: var(--text-secondary);
     width: 200px;
-    text-align: center;
+    text-align: left;
 }
 
 .minimal-input::placeholder {
@@ -860,6 +860,7 @@ footer {
 }
 
 .form-message {
+    text-align: left;
     margin-top: 0.5rem;
     font-size: 0.75rem;
     color: var(--text-muted);

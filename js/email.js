@@ -70,8 +70,7 @@ function initEmailForm() {
                 })
                 .catch(error => {
                     console.error('Error!', error.message);
-                    messageDiv.textContent = 'error.';
-                    messageDiv.style.color = 'red';
+                    messageDiv.textContent = 'system busy, send hi on x/twitter';
                 })
                 .finally(() => {
                     submitBtn.textContent = originalBtnText;
