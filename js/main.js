@@ -16,19 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadComponents() {
-    const headPlaceholder = document.getElementById('head-placeholder');
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
-
-    if (headPlaceholder) {
-        try {
-            const response = await fetch(`components/head.html?t=${new Date().getTime()}`);
-            const html = await response.text();
-            headPlaceholder.innerHTML = html;
-        } catch (error) {
-            console.error('Error loading head:', error);
-        }
-    }
 
     if (navbarPlaceholder) {
         try {
