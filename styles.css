@@ -360,7 +360,7 @@ main {
     flex-direction: column;
     gap: 0.75rem;
     /* space-y-3 */
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 .summary-list>em,
@@ -500,7 +500,7 @@ p {
     /* text-gray-500 */
     padding-left: 2.25rem;
     /* pl-9 */
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 /* Writing List */

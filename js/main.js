@@ -61,7 +61,7 @@ function initTime() {
         const timeString = now.toLocaleTimeString('en-IN', {
             timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true
         }).replace(/am|pm/i, m => m.toUpperCase());
-        const text = `${timeString} · Sagara`;
+        const text = `${timeString} · Bengaluru, India`;
 
         const desktopTime = document.getElementById('indian-time');
         const mobileTime = document.getElementById('indian-time-mobile');
